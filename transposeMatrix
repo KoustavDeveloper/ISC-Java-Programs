@@ -1,0 +1,31 @@
+import java.util.*;
+public class transposeMatrix {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Row & Column Size : ");
+        int m = sc.nextInt();
+        int ar[][] = new int[m][m];
+        int ar1[][] = new int[m][m];
+        System.out.println("Enter the values : ");
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<m;j++) 
+                ar[i][j] = sc.nextInt();  
+        }
+        System.out.println("The Matrix Is : ");
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<m;j++) 
+                System.out.print(ar[i][j]+" ");
+                System.out.println();
+        }
+        System.out.println("The Transpose of the Matrix is : ");
+          for(int i=0;i<m;i++) {
+             for(int j=0;j<m;j++) 
+              ar1[j][i] = ar[i][j];      
+        }
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<m;j++) 
+                System.out.print(ar1[i][j] + " ");
+            System.out.println();
+            }
+    }
+}
